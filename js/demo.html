@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Click2Call Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+<body>
+
+    <h1>Demo Click2Call</h1>
+    <p></p>
+    <p>
+    <button id="btn-call">Ligue Já</button>
+    </p>
+
+    <script type="text/javascript" src="http://api.ligflat.com.br/assets/js/jquery.js"></script>
+
+    <!-- 
+        Version 0.0.1
+        These script files will be loaded on-demand on next versions
+    -->
+    <link href="http://api.ligflat.com.br/assets/click2call/click2call.css" rel="stylesheet" />
+    <script src="http://api.ligflat.com.br/assets/click2call/rssi.js" type="text/javascript"></script>
+    <script src="http://api.ligflat.com.br/assets/click2call/picoModal.js" type="text/javascript"></script>
+    <script src="http://api.ligflat.com.br/assets/click2call/SIPml-api.js" type="text/javascript"></script>
+
+    <!-- 
+        This will be the only script to be declared on source code
+    -->
+    <script type="text/javascript" src="http://api.ligflat.com.br/assets/click2call/click2call.js"></script>
+
+    <!-- Your Script do Click2Call -->
+    <script type="text/javascript">
+    jQuery(function()
+    {
+        /*
+         * Put your Click2Call id below
+         * If you want to identify your caller, set name
+         */
+
+        //FIXME Name is not working yet
+        
+        $('#btn-call').click2call({
+            id: 'demo-id-here',
+            name: 'name-here'
+        });
+    });
+    </script>
+</body>
