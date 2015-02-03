@@ -27,12 +27,14 @@
     {
         /*
          * Put your Click2Call id below
-         * If you want to identify your caller, set name
          */
         $('.click2call-btn').click2call({
-            id: $('#ligflat-id').val(),
-            name: 'Click2Call Demo',
-            type: 'call-audiovideo'
+            id: 'fill-with-ligflat-id',
+        })
+        .on('click', function() {
+            // We are getting the ID dinamically, from the input
+            // So we set the Click2Call ID on the button object
+            $(this).data('click2call').options.id = $('#ligflat-id').val();
         });
     });
     </script>
